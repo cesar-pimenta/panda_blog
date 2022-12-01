@@ -20,6 +20,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sass_processor',
     'core',
+    'blog',
+    'contact',
+    'about',
+    'photo',
 ]
 
 MIDDLEWARE = [

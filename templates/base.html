@@ -11,7 +11,13 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body class="container">
+        <h1 class="visually-hidden">Headers examples</h1>
 
+  <div class="container">
+        <header>
+            {% include 'header.html' %}
+        </header>
+        
         {% block content %} {% endblock %}
 
         <!-- JavaScript Bundle with Popper -->

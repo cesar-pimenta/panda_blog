@@ -120,4 +120,5 @@ dmypy.json
 
 #imagens
 imagens/
-static
+_static
+_media

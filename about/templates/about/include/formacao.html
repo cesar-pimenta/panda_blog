@@ -2,7 +2,10 @@
     {% for education  in educations %}
     <div class="pb-md-2 pt-md-2">
         <h3>{{ education.institution }}</h3>
-        <h4>{{ education.course }}</h4>
+        <div class="d-flex align-items-center">
+            <h4>{{ education.course }}</h4>
+            <span>&nbsp&nbsp{{ education.final_date.year }}</span>
+        </div>
     </div>
     {% endfor %}
 </div>

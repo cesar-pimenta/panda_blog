@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from core.mixins import DateCreateUpdate
 from perfil.models import Profile
@@ -19,6 +20,14 @@ class ProfessionalExperience(DateCreateUpdate):
     def __str__(self):
         return '{} - in -> {}'.format(self.position, self.company)
 
+    def duration(self):
+        if self.final_date:
+            duration = (self.final_date - self.start_date)
+            return duration.days
+        else:
+            duration = (datetime.date.today() - self.start_date)
+            return duration.days
+
 
 class ProfileEducation(DateCreateUpdate):
     user = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='education')
@@ -32,6 +41,7 @@ class ProfileEducation(DateCreateUpdate):
     class Meta:
         verbose_name = 'Education'
         verbose_name_plural = 'Educations'
+        ordering = ['-final_date']
 
     def __str__(self):
         return '{} - in -> {}'.format(self.course, self.institution)

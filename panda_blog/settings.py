@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'contact',
     'about',
     'photo',
+    'perfil',
 ]
 
 MIDDLEWARE = [

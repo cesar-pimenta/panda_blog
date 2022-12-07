@@ -3,5 +3,38 @@
 {% block title %} About {% endblock %}
 
 {% block content %}
-
+    <section class="container-md p-0">
+        <div class="row shadow p-0 rounded-4">
+            <div class="col-md-6 col-xxl-4 pb-5 pb-md-0">
+                {% include "about/include/img_perfil.html" %}
+            </div>
+            <div class="col-md-6 col-xxl-8">
+                {% include "about/include/resume.html" %}
+            </div>
+        </div>
+        <div>
+            <h2>Experiência Profissional</h2>
+        </div>
+        <div class="row shadow p-0 rounded-4">
+            <div class="">
+                {% include "about/include/professional_experience.html" %}
+            </div>
+        </div>
+        <div>
+            <h2>Formação</h2>
+        </div>
+        <div class="row shadow p-0 rounded-4">
+            <div class="">
+                {% include "about/include/formacao.html" %}
+            </div>
+        </div>
+        <div>
+            <h2>Certificações</h2>
+        </div>
+        <div class="row shadow p-0 rounded-4">
+            <div class="">
+                {% include "about/include/certificacao.html" %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

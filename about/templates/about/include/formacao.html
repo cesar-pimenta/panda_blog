@@ -1,4 +1,8 @@
-<div>
-    <h3>Impacta</h3>
-    <h4>Sistemas da informação</h4>
+<div class="p-2 p-md-3 pt-md-4 pb-md-4">
+    {% for education  in educations %}
+    <div class="pb-md-2 pt-md-2">
+        <h3>{{ education.institution }}</h3>
+        <h4>{{ education.course }}</h4>
+    </div>
+    {% endfor %}
 </div>

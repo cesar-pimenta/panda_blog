@@ -1,3 +1,8 @@
-<div>
-    ppp
+<div class="p-2 p-md-3 pt-md-4 pb-md-4">
+    {% for certification  in certifications %}
+    <div class="pb-md-2 pt-md-2">
+        <h3>{{ certification.institution }}</h3>
+        <h4>{{ certification.course }}</h4>
+    </div>
+    {% endfor %}
 </div>

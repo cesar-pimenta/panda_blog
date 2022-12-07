@@ -17,7 +17,7 @@
         </div>
         <div class="row shadow p-0 rounded-4">
             <div class="">
-                {% include "about/include/professional_experience.html" %}
+                {% include "about/include/professional_experience.html" with experiencias=profile.professionalExperience.all %}
             </div>
         </div>
         <div>
